@@ -1,8 +1,5 @@
 pipeline {
   //agent any
-  tools {
-    nodejs "node"
-  }
   //node {       
    //def workspace = pwd() 
   //}
