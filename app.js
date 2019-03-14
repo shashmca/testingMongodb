@@ -11,13 +11,14 @@ var users = require('./routes/users');
 
 var app = express();
 
-let url = "mongodb://localhost:27017/giftdb";
+let url = "mongodb://127.0.0.1:27017/giftdb";
 mongoose.connect(url, { useNewUrlParser: true })
   .then(() => {
     console.log("connected with mongodb");
   })
-  .catch(() => {
+  .catch((err) => {
     console.log("error while connecting with mongodb");
+    console.log(err);
   })
 
 // view engine setup
